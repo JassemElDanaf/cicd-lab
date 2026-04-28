@@ -5,7 +5,7 @@ resource "aws_s3_bucket" "demo" {
     Environment = var.environment
     ManagedBy   = "terraform"
     Lab         = "010"
-    Owner       = "Jassem El Danaf"
+    Owner       = "Jassem El Danaf, George Abou Assale"
   }
 }
 
