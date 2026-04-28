@@ -1,7 +1,5 @@
-FROM node:18-alpine
-RUN apk upgrade --no-cache && \
-    npm install -g npm@latest && \
-    rm -rf /root/.npm /tmp/*
+FROM node:20-alpine
+RUN apk upgrade --no-cache
 WORKDIR /app
 COPY package*.json ./
 RUN npm ci --omit=dev
