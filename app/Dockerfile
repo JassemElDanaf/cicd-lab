@@ -1,7 +1,8 @@
-FROM node:18-alpine
+FROM node:20-alpine
+RUN apk upgrade --no-cache
 WORKDIR /app
 COPY package*.json ./
 RUN npm ci --omit=dev
 COPY server.js .
 EXPOSE 3000
-CMD ["npm", "start"]
+CMD ["node", "server.js"]
